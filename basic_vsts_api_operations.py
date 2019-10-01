@@ -1,5 +1,5 @@
 """
-Basic Vsts GET operations using gitlab APIs and python
+Basic Vsts GET operations using vsts APIs and python
 
 Supports :
 
