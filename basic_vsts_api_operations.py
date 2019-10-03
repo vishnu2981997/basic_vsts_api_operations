@@ -20,12 +20,15 @@ else:
 
 
 class Vsts:
+    """
+    Vsts class
+    """
 
     def __init__(self, user_name=None, access_token=None):
         """
-
-        :param user_name:
-        :param access_token:
+        Constructor
+        :param user_name: string
+        :param access_token: string
         """
         self.__user_name = user_name
         self.__access_token = access_token
@@ -66,10 +69,10 @@ class Vsts:
 
     def __invoke_api(self, extension=None, extra_headers=None):
         """
-
-        :param extension:
-        :param extra_headers:
-        :return:
+        Makes api call to the given url
+        :param extension: string
+        :param extra_headers: dictionary
+        :return: object containing the http response
         """
         headers = {
             "Authorization": "Basic " + self.access_token,
@@ -89,9 +92,9 @@ class Vsts:
     @staticmethod
     def __format_repo(repo):
         """
-
-        :param repo:
-        :return:
+        separates organization and repository name
+        :param repo: string
+        :return: array of strings
         """
         data = repo.split("/")
         organization = data[0]
